@@ -1,0 +1,11 @@
+.ant-select,
+.ant-select-single,
+.ant-select-show-arrow {
+  .ant-select-selector {
+    border: none !important;
+  }
+}
+.ant-select-dropdown.ant-select-dropdown-placement-bottomLeft {
+  min-width: 300px !important;
+  right: 200px !important;
+}

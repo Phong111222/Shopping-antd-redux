@@ -1,0 +1,7 @@
+.root {
+  div {
+    &:last-child {
+      left: 0;
+    }
+  }
+}
