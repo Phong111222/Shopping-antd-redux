@@ -1,7 +1,18 @@
-.root {
-  div {
-    &:last-child {
-      left: 0;
-    }
-  }
+.flex {
+  display: flex;
+}
+.j-between {
+  justify-content: space-between;
+}
+.j-center {
+  justify-content: center;
+}
+.a-center {
+  align-items: center;
+}
+.a-baseline {
+  align-items: baseline;
+}
+.w-100 {
+  width: 100%;
 }

@@ -6,7 +6,7 @@ import {
   faPlus,
   faMinus,
 } from '@fortawesome/free-solid-svg-icons';
-import { Dropdown, Button, Select } from 'antd';
+import { Button, Select, InputNumber } from 'antd';
 import './Cart.scss';
 const Arr = [
   { key: 1, name: 'option 1', quantities: 1 },
@@ -30,24 +30,26 @@ const Cart = () => {
       </div>
       <div className=''>
         <Select
-          showArrow='false'
-          style={{ border: 'none' }}
-          suffixIcon={<FontAwesomeIcon icon={faShoppingCart} size={'3x'} />}
+          listItemHeight={5}
+          listHeight={300}
+          focus={false}
           defaultOpen={true}
+          dropdownMatchSelectWidth='false'
+          dropdownClassName='Selected_list'
+          virtual={true}
+          showArrow={false}
+          menuItemSelectedIcon={<FontAwesomeIcon icon={faShoppingCart} />}
+          size='large'
         >
           {Arr.map((item) => {
             return (
               <Select.Option key={item.key} disabled={true}>
-                <div style={{ width: 1000 }}>
-                  <p>{item.name}</p>
-                  <div
-                    style={{ display: 'flex', justifyContent: 'space-between' }}
-                  >
-                    <Button icon={<FontAwesomeIcon icon={faPlus} />} />
-                    <p>{item.quantities}</p>
-                    <Button icon={<FontAwesomeIcon icon={faMinus} />} />
-                  </div>
-                  <FontAwesomeIcon icon={faTrash} />
+                <div className='w-100 flex j-between'>
+                  <p style={{ color: 'black' }}>{item.name}</p>
+                  <InputNumber />
+                  <Button>
+                    <FontAwesomeIcon icon={faTrash} />
+                  </Button>
                 </div>
               </Select.Option>
             );

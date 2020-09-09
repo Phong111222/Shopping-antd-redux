@@ -1,11 +1,48 @@
-.ant-select,
-.ant-select-single,
-.ant-select-show-arrow {
-  .ant-select-selector {
-    border: none !important;
+// .ant-select,
+// .ant-select-single,
+// .ant-select-show-arrow {
+//   .ant-select-selector {
+//     border: none !important;
+//   }
+// }
+// .ant-select-dropdown.ant-select-dropdown-placement-bottomLeft {
+//   min-width: 300px !important;
+//   right: 200px !important;
+// }
+.ant-select-selector {
+  border: none !important;
+  background: white !important;
+  background: url('https://thumbs.dreamstime.com/b/shopping-cart-icon-vector-logo-137282150.jpg');
+  height: 100px;
+  // &::after {
+  //   content: '\f0da' !important;
+  //   font-family: FontAwesome !important;
+  //   font-weight: normal !important;
+  //   font-style: normal !important;
+  //   margin: 0px 0px 0px 10px !important;
+  //   text-decoration: none !important;
+  // }
+}
+.Selected_list {
+  min-width: 450px !important;
+  left: 820px !important;
+  top: 120px !important;
+  .ant-select-item-option-content {
+    width: 100% !important;
   }
 }
-.ant-select-dropdown.ant-select-dropdown-placement-bottomLeft {
-  min-width: 300px !important;
-  right: 200px !important;
+
+.ant-select-focused .ant-select-selector,
+.ant-select-selector:focus,
+.ant-select-selector:active,
+.ant-select-open .ant-select-selector {
+  border-color: #d9d9d9 !important;
+  box-shadow: none !important;
+}
+
+.ant-select-selector {
+  background: url('https://img.icons8.com/pastel-glyph/2x/shopping-cart--v2.png') !important;
+  background-size: cover !important;
+  width: 50px !important;
+  height: 50px !important;
 }
