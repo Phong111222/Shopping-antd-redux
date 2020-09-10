@@ -1,12 +1,17 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import { Header, ListItems } from './components/';
+import Footer from './components/Footer';
 const App = () => {
   return (
-    <div>
+    <React.Fragment>
       <Header />
-      <ListItems />
-    </div>
+
+      <div style={{ paddingTop: 200 }}>
+        <ListItems />
+        <Footer />
+      </div>
+    </React.Fragment>
   );
 };
 export default App;

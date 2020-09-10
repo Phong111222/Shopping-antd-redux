@@ -21,19 +21,16 @@ const Arr = [
 const Cart = () => {
   return (
     <div
-      className='Cart'
-      style={{ display: 'flex', width: '25%', alignItems: 'center' }}
+      className='Cart flex j-center'
+      style={{
+        width: '25%',
+      }}
     >
-      <div style={{ marginRight: 15 }}>
-        <p>No. of items : 0</p>
-        <p>Sub Total : 0</p>
-      </div>
       <div className=''>
         <Select
           listItemHeight={5}
           listHeight={300}
-          focus={false}
-          defaultOpen={true}
+          //defaultOpen={true}
           dropdownMatchSelectWidth='false'
           dropdownClassName='Selected_list'
           virtual={true}
@@ -55,6 +52,10 @@ const Cart = () => {
             );
           })}
         </Select>
+      </div>
+      <div style={{ marginLeft: 15 }}>
+        <p style={{ marginBottom: 0 }}>No. of items : 0</p>
+        <p style={{ marginBottom: 0 }}>Sub Total : 0</p>
       </div>
     </div>
   );

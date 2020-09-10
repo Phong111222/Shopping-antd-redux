@@ -4,17 +4,11 @@ import Cart from './Cart';
 import Logo from './Logo';
 const Header = () => {
   return (
-    <div className='SearchForm'>
-      <div
-        style={{
-          maxWidth: 1200,
-          margin: '0 auto',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: '20px 0 20px 0',
-        }}
-      >
+    <div
+      className='Header'
+      style={{ position: 'fixed', width: '100%', zIndex: 2, top: 0 }}
+    >
+      <div className='container flex j-center a-center py-20'>
         <Logo />
         <SearchForm />
         <Cart />

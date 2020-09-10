@@ -1,0 +1,10 @@
+button.ant-btn {
+  &:hover {
+    span {
+      color: white;
+    }
+  }
+  &:focus {
+    color: white;
+  }
+}
