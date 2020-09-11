@@ -16,13 +16,20 @@ const Item = ({ item }) => {
       <div
         className='Product_item '
         style={{ cursor: 'pointer', background: 'white' }}
-        onClick={() => setVisible(true)}
       >
         <div className='product_img'>
-          <img style={{ width: 200 }} src={image} alt='' />
+          <img
+            onClick={() => setVisible(true)}
+            style={{ width: 200 }}
+            src={image}
+            alt=''
+          />
         </div>
 
-        <div className='flex a-center j-center'>
+        <div
+          onClick={() => setVisible(true)}
+          className='flex a-center j-center'
+        >
           <div>
             <h3>{name}</h3>
             <h2 className='t-center'>{`$${price}`}</h2>
