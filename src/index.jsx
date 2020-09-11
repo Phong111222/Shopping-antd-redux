@@ -2,9 +2,14 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
 import App from './App';
-import store from './store/store';
+import configureStore from './store';
+
 import './style.scss';
-console.log(store.getState());
+
+const store = configureStore();
+// store.subscribe(() => console.log(store.getState()));
+// store.dispatch(loadProduct());
+
 ReactDom.render(
   <Provider store={store}>
     <App />

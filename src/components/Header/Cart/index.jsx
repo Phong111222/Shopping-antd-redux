@@ -1,24 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faShoppingCart,
-  faTrash,
-  faPlus,
-  faMinus,
-} from '@fortawesome/free-solid-svg-icons';
-import { Button, Select, InputNumber } from 'antd';
-import './Cart.scss';
-const Arr = [
-  { key: 1, name: 'option 1', quantities: 1 },
-  { key: 2, name: 'option 2', quantities: 3 },
-  { key: 3, name: 'option 3', quantities: 5 },
-  { key: 4, name: 'option 4', quantities: 6 },
-  { key: 5, name: 'option 4', quantities: 6 },
-  { key: 6, name: 'option 4', quantities: 6 },
-  { key: 7, name: 'option 4', quantities: 6 },
-];
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { Select } from 'antd';
 
-const Cart = () => {
+import './Cart.scss';
+import CartItem from './CartItem/CartItem';
+
+const Cart = ({ Cart }) => {
+  const { selectedtList, TotalAmount } = Cart;
+
   return (
     <div
       className='Cart flex j-center'
@@ -30,7 +20,6 @@ const Cart = () => {
         <Select
           listItemHeight={5}
           listHeight={300}
-          //defaultOpen={true}
           dropdownMatchSelectWidth='false'
           dropdownClassName='Selected_list'
           virtual={true}
@@ -38,24 +27,19 @@ const Cart = () => {
           menuItemSelectedIcon={<FontAwesomeIcon icon={faShoppingCart} />}
           size='large'
         >
-          {Arr.map((item) => {
-            return (
-              <Select.Option key={item.key} disabled={true}>
-                <div className='w-100 flex j-between'>
-                  <p style={{ color: 'black' }}>{item.name}</p>
-                  <InputNumber />
-                  <Button>
-                    <FontAwesomeIcon icon={faTrash} />
-                  </Button>
-                </div>
-              </Select.Option>
-            );
-          })}
+          {selectedtList.length &&
+            selectedtList.map((item) => {
+              return (
+                <Select.Option disabled={true} key={item.name}>
+                  <CartItem item={item} />
+                </Select.Option>
+              );
+            })}
         </Select>
       </div>
       <div style={{ marginLeft: 15 }}>
-        <p style={{ marginBottom: 0 }}>No. of items : 0</p>
-        <p style={{ marginBottom: 0 }}>Sub Total : 0</p>
+        <p style={{ marginBottom: 0 }}>No. of items : {selectedtList.length}</p>
+        <p style={{ marginBottom: 0 }}>Sub Total : {TotalAmount}</p>
       </div>
     </div>
   );

@@ -1,0 +1,26 @@
+.Product_item {
+  transition: ease-in-out 0.5s;
+  overflow: hidden;
+  .product_img {
+    overflow: hidden;
+  }
+  img {
+    transition: all 0.5s;
+  }
+  &:hover {
+    box-shadow: 0 0 0 3px rgba($color: #414141, $alpha: 0.1);
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+button.ant-btn {
+  &:hover {
+    span {
+      color: white;
+    }
+  }
+  &:focus {
+    color: white;
+  }
+}
