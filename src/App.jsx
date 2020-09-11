@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(loadProduct());
-  }, [dispatch]);
+  }, [loading]);
   return (
     <React.Fragment>
       <Header />
