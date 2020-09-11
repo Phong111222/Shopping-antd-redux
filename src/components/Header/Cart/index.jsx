@@ -11,7 +11,7 @@ const Cart = ({ Cart }) => {
 
   return (
     <div
-      className='Cart flex j-center'
+      className='Cart flex j-end'
       style={{
         width: '25%',
       }}
